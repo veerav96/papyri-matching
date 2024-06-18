@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/8.13/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="hgv21365">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Contract for Purchase and Delivery of Radish Oil (Paid Requisition)</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">21365</idno>
+            <idno type="TM">21365</idno>
+            <idno type="ddb-perseus-style">0163;11;613</idno>
+            <idno type="ddb-filename">p.mich.11.613</idno>
+            <idno type="ddb-hybrid">p.mich;11;613</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <placeName>
+                     <settlement>unbekannt</settlement>
+                  </placeName>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <material>Papyrus</material>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>Herakleopolis</origPlace>
+                     <origDate when="0415-08-19">19. Aug. 415</origDate>
+                  </origin>
+                  <provenance type="located">
+                     <p>
+                        <placeName type="ancient"
+                                   ref="https://pleiades.stoa.org/places/736920 https://www.trismegistos.org/place/801">Herakleopolis</placeName>
+                        <placeName type="ancient"
+                                   subtype="nome"
+                                   ref="https://www.trismegistos.org/place/2713 https://pleiades.stoa.org/places/736921">Herakleopolites</placeName>
+                        <placeName type="ancient" subtype="region">Ägypten</placeName>
+                     </p>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>This file encoded to comply with EpiDoc Guidelines and Schema version 8
+                <ref>http://www.stoa.org/epidoc/gl/5/</ref>
+         </p>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="fr">Französisch</language>
+            <language ident="en">Englisch</language>
+            <language ident="de">Deutsch</language>
+            <language ident="it">Italienisch</language>
+            <language ident="es">Spanisch</language>
+            <language ident="la">Latein</language>
+            <language ident="el">Griechisch</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="hgv">
+               <term>Kauf</term>
+               <term>Lieferung</term>
+               <term>Rettichöl</term>
+               <term>annona</term>
+               <term>Alexandriner</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change who="HGV" when="1991-09-25">Record created</change>
+         <change who="HGV" when="2011-04-19">Record last modified</change>
+         <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="commentary" subtype="general">
+            <p>Zu Z. 2 vgl. P.Worp, S. 197f.</p>
+         </div>
+         <div type="bibliography" subtype="principalEdition">
+            <listBibl>
+               <bibl type="publication" subtype="principal">
+                  <title level="s" type="abbreviated">P.Mich.</title>
+                  <biblScope type="volume">11</biblScope>
+                  <biblScope type="numbers">613</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="illustrations">
+            <p>
+               <bibl type="illustration">Plate III</bibl>
+            </p>
+         </div>
+         <div type="figure">
+            <p>
+               <figure>
+                  <graphic url="http://quod.lib.umich.edu/a/apis/x-1552"/>
+               </figure>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

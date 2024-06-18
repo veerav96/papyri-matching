@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/8.13/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="hgv21243">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Ricevuta di νεκροτάφοι </title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">21243</idno>
+            <idno type="TM">21243</idno>
+            <idno type="ddb-perseus-style">0147;2;33</idno>
+            <idno type="ddb-filename">p.laur.2.33</idno>
+            <idno type="ddb-hybrid">p.laur;2;33</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <placeName>
+                     <settlement>unbekannt</settlement>
+                  </placeName>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <material>Papyrus</material>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>Thebais</origPlace>
+                     <origDate when="0048-10-22">22. Okt. 48</origDate>
+                  </origin>
+                  <provenance type="located">
+                     <p>
+                        <placeName type="ancient"
+                                   ref="https://pleiades.stoa.org/places/786131 https://www.trismegistos.org/place/2982">Thebais</placeName>
+                     </p>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>This file encoded to comply with EpiDoc Guidelines and Schema version 8
+                <ref>http://www.stoa.org/epidoc/gl/5/</ref>
+         </p>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="fr">Französisch</language>
+            <language ident="en">Englisch</language>
+            <language ident="de">Deutsch</language>
+            <language ident="it">Italienisch</language>
+            <language ident="es">Spanisch</language>
+            <language ident="la">Latein</language>
+            <language ident="el">Griechisch</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="hgv">
+               <term>Quittung</term>
+               <term>Empfang von Geld</term>
+               <term>Steuern gerichtet an νεκροτάφοι</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change who="HGV" when="1991-01-18">Record created</change>
+         <change who="HGV" when="2011-04-19">Record last modified</change>
+         <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="commentary" subtype="general">
+            <p>Griechisch - demotisch (vgl. BL VII, S. 76). Zu Z. 3 vgl. P.Worp 17, S. 112, Anm. 7.</p>
+         </div>
+         <div type="bibliography" subtype="principalEdition">
+            <listBibl>
+               <bibl type="publication" subtype="principal">
+                  <title level="s" type="abbreviated">P.Laur.</title>
+                  <biblScope type="volume">2</biblScope>
+                  <biblScope type="numbers">33</biblScope>
+               </bibl>
+               <bibl>
+                  <title>DAHT</title>
+                  <biblScope>21243</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="corrections">
+            <head>BL-Einträge nach BL-Konkordanz</head>
+            <listBibl>
+               <bibl type="BL">
+                  <biblScope type="volume">XII</biblScope>
+                  <biblScope type="pages">97</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="illustrations">
+            <p>
+               <bibl type="illustration">Tav. XXXIII</bibl>
+            </p>
+         </div>
+         <div type="figure">
+            <p>
+               <figure>
+                  <graphic url="http://www.psi-online.it/documents/plaur;2;33/"/>
+               </figure>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

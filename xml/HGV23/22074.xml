@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/8.13/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="hgv22074">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Gestellungsbürgschaft</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">22074</idno>
+            <idno type="TM">22074</idno>
+            <idno type="ddb-perseus-style">;28;17002</idno>
+            <idno type="ddb-filename">sb.28.17002</idno>
+            <idno type="ddb-hybrid">sb;28;17002</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <placeName>
+                     <settlement>Oxford</settlement>
+                  </placeName>
+                  <collection>Sackler Library, Papyrology Rooms</collection>
+                  <idno type="invNo">P.Oxy. XVI 1979</idno>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <material>Papyrus</material>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>Oxyrhynchos (Oxyrhynchites, Ägypten)</origPlace>
+                     <origDate when="0614-08-19">19. Aug. 614</origDate>
+                  </origin>
+                  <provenance type="located">
+                     <p>
+                        <placeName n="1"
+                                   type="ancient"
+                                   ref="https://www.trismegistos.org/place/1524 https://pleiades.stoa.org/places/736983">Oxyrhynchos</placeName>
+                        <placeName n="2"
+                                   type="ancient"
+                                   subtype="nome"
+                                   ref="https://www.trismegistos.org/place/2722 https://pleiades.stoa.org/places/736982">Oxyrhynchites</placeName>
+                        <placeName n="3" type="ancient" subtype="region">Ägypten</placeName>
+                     </p>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>
+        This file encoded to comply with EpiDoc Guidelines and Schema version 8
+        <ref>http://www.stoa.org/epidoc/gl/5/</ref>
+         </p>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="fr">Französisch</language>
+            <language ident="en">Englisch</language>
+            <language ident="de">Deutsch</language>
+            <language ident="it">Italienisch</language>
+            <language ident="es">Spanisch</language>
+            <language ident="la">Latein</language>
+            <language ident="el">Griechisch</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="hgv">
+               <term n="1">Bürgschaft</term>
+               <term n="2">Aur. Makarios gegenüber Fl. Apion für den Wächter Aur. Biktor</term>
+               <term n="3">Gestellung</term>
+               <term n="4">Eid</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2024-01-29T09:04:16-05:00"
+                 who="http://papyri.info/editor/users/paulpeters">Finalized - Ready.</change>
+         <change when="2024-01-29T09:00:07-05:00"
+                 who="http://papyri.info/editor/users/paulpeters">Vote - HGVAccept - Looks good.</change>
+         <change when="2024-01-27T12:18:08-05:00"
+                 who="http://papyri.info/editor/users/ngonis">Submit - [HGV] Entered linl to digital image. [DDbDP] Entered published correction to lin25 and fixed a couple of entry errors (βα̣σιλ̣ε̣ίας lin2, κς lin4).</change>
+         <change who="HGV" when="1994-01-05">Record created</change>
+         <change who="HGV" when="2011-04-19">Record last modified</change>
+         <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
+         <change when="2016-06-15" who="IDP">Crosswalked to EpiDoc XML</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <div type="bibliography" subtype="principalEdition">
+            <listBibl>
+               <bibl type="publication" subtype="principal">
+                  <title level="s" type="abbreviated">SB</title>
+                  <biblScope n="1" type="volume">28</biblScope>
+                  <biblScope n="2" type="numbers">17002</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="corrections">
+            <head>BL-Einträge nach BL-Konkordanz</head>
+            <listBibl>
+               <bibl type="BL-online">
+                  <ptr target="https://aquila.zaw.uni-heidelberg.de/bl/hgv/22074"/>
+               </bibl>
+               <bibl type="BL">
+                  <biblScope type="volume">XII</biblScope>
+                  <biblScope type="pages">143</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="illustrations">
+            <p>
+               <bibl type="illustration" n="1">Diethart - Worp, Notarsunterschriften, Tafel 44, Oxy. 12.1.1 (Z. 25 - 26)</bibl>
+               <bibl type="illustration" n="2">JJP 32, 2002, nach S. 30</bibl>
+            </p>
+         </div>
+         <div type="bibliography" subtype="otherPublications">
+            <head>Andere Publikation</head>
+            <listBibl>
+               <bibl type="publication" subtype="other">P.Oxy. XVI 1979</bibl>
+            </listBibl>
+         </div>
+         <div type="figure">
+            <p>
+               <figure>
+                  <graphic url="https://doi.org/10.25446/oxford.21133444"/>
+               </figure>
+            </p>
+         </div>
+      </body>
+  </text>
+</TEI>

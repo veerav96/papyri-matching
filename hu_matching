@@ -1,0 +1,214 @@
+import cv2
+import os
+import pickle
+import numpy as np
+
+# Global variables to store points
+points = []
+
+def click_event(event, x, y, flags, params):
+    global points, img
+    if event == cv2.EVENT_LBUTTONDOWN:
+        points.append((x, y))
+        cv2.circle(img, (x, y), 5, (0, 0, 255), -1)
+        if len(points) == 4:
+            ordered_pts = order_points(np.array(points, dtype="float32"))
+            cv2.polylines(img, [np.int32(ordered_pts)], isClosed=True, color=(255, 0, 0), thickness=2)
+        cv2.imshow("User Image", img)
+
+def order_points(pts):
+    rect = np.zeros((4, 2), dtype="float32")
+    s = pts.sum(axis=1)
+    rect[0] = pts[np.argmin(s)]
+    rect[2] = pts[np.argmax(s)]
+    diff = np.diff(pts, axis=1)
+    rect[1] = pts[np.argmin(diff)]
+    rect[3] = pts[np.argmax(diff)]
+    return rect
+
+def perspective_transform(image, pts):
+    rect = order_points(pts)
+    (tl, tr, br, bl) = rect
+
+    widthA = np.linalg.norm(br - bl)
+    widthB = np.linalg.norm(tr - tl)
+    maxWidth = int(max(widthA, widthB))
+
+    heightA = np.linalg.norm(tr - br)
+    heightB = np.linalg.norm(tl - bl)
+    maxHeight = int(max(heightA, heightB))
+
+    dst = np.array([[0, 0],
+                    [maxWidth - 1, 0],
+                    [maxWidth - 1, maxHeight - 1],
+                    [0, maxHeight - 1]], dtype="float32")
+
+    M = cv2.getPerspectiveTransform(rect, dst)
+    warped = cv2.warpPerspective(image, M, (maxWidth, maxHeight),borderMode=cv2.BORDER_TRANSPARENT)
+
+    return warped
+
+def compute_hu_moments(image):
+    if isinstance(image, str):
+        img = cv2.imread(image, cv2.IMREAD_GRAYSCALE)
+    else:
+        img = image
+    blurred_image = cv2.GaussianBlur(img, (3, 3), 0)
+    blurred_image = cv2.medianBlur(blurred_image, 3)
+    _, binary_img = cv2.threshold(blurred_image, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
+    contours, _ = cv2.findContours(binary_img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+    # Identify the outermost contour (the outer boundary)
+    outer_contour = max(contours, key=cv2.contourArea)
+
+    # Filter out the outer boundary contour and keep only the interior holes
+    interior_contours = [cnt for cnt in contours if cv2.contourArea(cnt) < cv2.contourArea(outer_contour)]
+
+    # Sort the interior contours based on area
+    interior_contours = sorted(interior_contours, key=cv2.contourArea, reverse=True)[:10]
+
+    hu_moments_list = []
+    keypoints = []
+
+    for contour in interior_contours:
+        # Compute Hu moments
+        moments = cv2.moments(contour)
+        hu_moments = cv2.HuMoments(moments).flatten()
+        hu_moments_list.append(hu_moments)
+
+        # Compute centroid (keypoint) of the contour
+        cX = int(moments["m10"] / moments["m00"])
+        cY = int(moments["m01"] / moments["m00"])
+        keypoints.append((cX, cY))
+
+    return np.array(hu_moments_list, dtype=np.float32), keypoints
+
+def load_precomputed_hu_moments(pkl_file):
+    if os.path.exists(pkl_file):
+        with open(pkl_file, 'rb') as f:
+            return pickle.load(f)
+    return {}
+
+def precompute_reference_hu_moments(reference_image_dir, output_pkl):
+    reference_hu_moments = load_precomputed_hu_moments(output_pkl)
+
+    for root, _, files in os.walk(reference_image_dir):
+        for filename in files:
+            if filename.endswith(('.jpg', '.png')):
+                image_path = os.path.join(root, filename)
+                relative_path = os.path.relpath(image_path, reference_image_dir)
+                if relative_path not in reference_hu_moments:
+                    hu_moments, keypoints = compute_hu_moments(image_path)
+                    reference_hu_moments[relative_path] = (hu_moments, keypoints)
+
+    with open(output_pkl, 'wb') as f:
+        pickle.dump(reference_hu_moments, f)
+
+def flann_match(query_hu_moments, reference_hu_moments):
+    # FLANN parameters
+    FLANN_INDEX_KDTREE = 1
+    index_params = dict(algorithm=FLANN_INDEX_KDTREE, trees=5)
+    search_params = dict(checks=50)
+    flann = cv2.FlannBasedMatcher(index_params, search_params)
+    
+    best_match_filename = None
+    best_match_score = float('inf')
+    max_good_matches = 0
+    
+    for filename, (ref_hu_moments, _) in reference_hu_moments.items():
+        matches = flann.knnMatch(query_hu_moments, ref_hu_moments, k=2)
+        
+        good_matches = [m for m, n in matches if m.distance < 0.7 * n.distance]
+        
+        if len(good_matches) > max_good_matches:
+            max_good_matches = len(good_matches)
+            best_match_score = sum([m.distance for m in good_matches])
+            best_match_filename = filename
+        elif len(good_matches) == max_good_matches:
+            match_score = sum([m.distance for m in good_matches])
+            if match_score < best_match_score:
+                best_match_score = match_score
+                best_match_filename = filename
+    
+    return best_match_filename, best_match_score
+
+def process_query_image(query_image_path):
+    global img
+    img = cv2.imread(query_image_path, cv2.IMREAD_GRAYSCALE)
+    height, width = img.shape[:2]
+
+    cv2.namedWindow("User Image", cv2.WINDOW_NORMAL)
+    cv2.resizeWindow("User Image", width, height)
+    cv2.imshow("User Image", img)
+    cv2.setMouseCallback("User Image", click_event)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+    if len(points) == 4:
+        pts = np.array(points, dtype="float32")
+        warped = perspective_transform(img, pts)
+        height, width = warped.shape[:2]
+        cv2.namedWindow("warped", cv2.WINDOW_NORMAL)
+        cv2.resizeWindow("warped", width, height)
+        cv2.imshow("warped", warped)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+
+        return warped
+    else:
+        print("Error: Please click exactly 4 points.")
+        return None
+
+
+def visualize_match(modified_query_img, best_match_filename, reference_image_dir, reference_hu_moments, query_keypoints):
+    # Display the modified query image
+    cv2.imshow("Modified Query Image", modified_query_img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+    # Load the best matching reference image
+    best_match_img = cv2.imread(os.path.join(reference_image_dir, best_match_filename))
+
+    # Load keypoints for the best match image
+    _, reference_keypoints = reference_hu_moments[best_match_filename]
+
+    # Draw keypoints on the query image
+    for pt in query_keypoints:
+        cv2.circle(modified_query_img, pt, 5, (0, 255, 0), -1)
+
+    # Draw keypoints on the best match image
+    for pt in reference_keypoints:
+        cv2.circle(best_match_img, pt, 5, (0, 255, 0), -1)
+
+    # Display the images with keypoints
+    combined_img = np.hstack((modified_query_img, best_match_img))
+    cv2.imshow('Query Image vs Best Match', combined_img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+def main():
+    # Precompute Hu moments for reference images and save to a pickle file
+    reference_image_dir = '/Users/cprao/Desktop/heidelberg_SEM3/practical/papyri-matching/images/test_image'
+    output_pkl = 'reference_hu_moments.pkl'
+    precompute_reference_hu_moments(reference_image_dir, output_pkl)
+
+    # Load precomputed Hu moments from the pickle file
+    reference_hu_moments = load_precomputed_hu_moments(output_pkl)
+
+    # Specify the query image path
+    query_image_path = '/Users/cprao/Desktop/heidelberg_SEM3/practical/papyri-matching/images/test_image/test/19314_p_g_25_a.jpg'
+
+    # Process the query image to get modified image and keypoints
+    modified_query_img = process_query_image(query_image_path)
+    query_hu_moments, query_keypoints = compute_hu_moments(modified_query_img)
+
+    # Perform FLANN-based KNN matching to find the best match
+    best_match_filename, best_match_score = flann_match(query_hu_moments, reference_hu_moments)
+    print(f"Best match: {best_match_filename} with score: {best_match_score}")
+
+    # Visualize the best matching reference image
+    visualize_match(modified_query_img, best_match_filename, reference_image_dir, reference_hu_moments, query_keypoints)
+
+if __name__ == "__main__":
+    main()
+

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/8.13/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="hgv22908">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Quittungshomologie über die Rückzahlung eines Darlehens</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">22908</idno>
+            <idno type="TM">22908</idno>
+            <idno type="ddb-perseus-style">0239;8;9827b</idno>
+            <idno type="ddb-filename">sb.8.9827b</idno>
+            <idno type="ddb-hybrid">sb;8;9827b</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <placeName>
+                     <settlement>Oslo</settlement>
+                  </placeName>
+                  <collection>University Library</collection>
+                  <idno type="invNo">P. 1447</idno>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <material>Papyrus</material>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>Oxyrhynchos (Oxyrhynchites, Ägypten)</origPlace>
+                     <origDate notBefore="0029-06-30">
+                        <offset n="1" type="after">nach</offset>
+                30. Juni 29
+              </origDate>
+                  </origin>
+                  <provenance type="located">
+                     <p>
+                        <placeName n="1"
+                                   type="ancient"
+                                   ref="http://www.trismegistos.org/place/1524 https://pleiades.stoa.org/places/736983">Oxyrhynchos</placeName>
+                        <placeName n="2"
+                                   type="ancient"
+                                   subtype="nome"
+                                   ref="http://www.trismegistos.org/place/2722 https://pleiades.stoa.org/places/736982">Oxyrhynchites</placeName>
+                        <placeName n="3" type="ancient" subtype="region">Ägypten</placeName>
+                     </p>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>
+        This file encoded to comply with EpiDoc Guidelines and Schema version 8
+        <ref>http://www.stoa.org/epidoc/gl/5/</ref>
+         </p>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="fr">Französisch</language>
+            <language ident="en">Englisch</language>
+            <language ident="de">Deutsch</language>
+            <language ident="it">Italienisch</language>
+            <language ident="es">Spanisch</language>
+            <language ident="la">Latein</language>
+            <language ident="el">Griechisch</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="hgv">
+               <term n="1">Quittung</term>
+               <term n="2">Geld</term>
+               <term n="3">Darlehen</term>
+               <term n="4">Rückzahlung</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2023-11-22T08:14:46-05:00"
+                 who="http://papyri.info/editor/users/paulpeters">Finalized - Ready.</change>
+         <change when="2023-11-22T08:11:12-05:00"
+                 who="http://papyri.info/editor/users/paulpeters">Vote - HGVAccept - Looks good.</change>
+         <change when="2015-10-21T05:01:34-04:00"
+                 who="http://papyri.info/editor/users/Jens%20Mangerud">Submit - date: after 29 CE according to edition (l.8: refer to 15th year of Tiberius, cf. also SB 9827a). 20 must be a typo in HGV, which spread here and to Trismegistos. Should be corrected in all places.</change>
+         <change when="2015-10-21T05:00:38-04:00"
+                 who="http://papyri.info/editor/users/Jens%20Mangerud">Commit - after 29 CE according to edition (l.8: refer to 15th year of Tiberius, cf. also SB 9827a). 20 must be a typo in HGV, which spread here and to trismegistos. Should be corrected in all places.</change>
+         <change who="HGV" when="1992-03-05">Record created</change>
+         <change who="HGV" when="2011-04-19">Record last modified</change>
+         <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <div type="bibliography" subtype="principalEdition">
+            <listBibl>
+               <bibl type="publication" subtype="principal">
+                  <title level="s" type="abbreviated">SB</title>
+                  <biblScope n="1" type="volume">8</biblScope>
+                  <biblScope n="2" type="numbers">9827</biblScope>
+                  <biblScope n="3" type="generic">b</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="corrections">
+            <head>BL-Einträge nach BL-Konkordanz</head>
+            <listBibl>
+               <bibl type="BL" n="1">
+                  <biblScope type="volume">VIII</biblScope>
+                  <biblScope type="pages">355</biblScope>
+               </bibl>
+               <bibl type="BL" n="2">
+                  <biblScope type="volume">IX</biblScope>
+                  <biblScope type="pages">265</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="illustrations">
+            <p>keine</p>
+         </div>
+         <div type="figure">
+            <p>
+               <figure>
+                  <graphic url="http://ipap.csad.ox.ac.uk/4DLink4/4DACTION/IPAPwebquery?vPub=SB&amp;vVol=8&amp;vNum=9827"/>
+               </figure>
+            </p>
+         </div>
+      </body>
+  </text>
+</TEI>

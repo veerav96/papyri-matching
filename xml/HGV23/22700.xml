@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/8.13/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="hgv22700">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Acknowledgement of debt to a church pronoetes</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">22700</idno>
+            <idno type="TM">22700</idno>
+            <idno type="ddb-perseus-style">0154;3;874</idno>
+            <idno type="ddb-filename">zpe.219.188_8</idno>
+            <idno type="ddb-hybrid">zpe;219;188_8</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <placeName>
+                     <settlement>London</settlement>
+                  </placeName>
+                  <collection>British Library</collection>
+                  <idno type="invNo">Pap 874</idno>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <material>Papyrus</material>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>Hermopolis, Ägypten</origPlace>
+                     <origDate when="0554-12-19">19. Dez. 554</origDate>
+                  </origin>
+                  <provenance type="located">
+                     <p>
+                        <placeName n="1"
+                                   type="ancient"
+                                   subtype="nome"
+                                   ref="https://www.trismegistos.org/place/816 https://pleiades.stoa.org/places/756574">Hermopolis</placeName>
+                        <placeName n="2" type="ancient" subtype="region">Ägypten</placeName>
+                     </p>
+                  </provenance>
+               </history>
+            </msDesc>
+            <listBibl>
+               <bibl type="SB">
+                  <ptr target="https://papyri.info/biblio/95881"/>
+                  <biblScope type="pp">188</biblScope>
+               </bibl>
+            </listBibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>
+        This file encoded to comply with EpiDoc Guidelines and Schema version 8
+        <ref>http://www.stoa.org/epidoc/gl/5/</ref>
+         </p>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="fr">Französisch</language>
+            <language ident="en">Englisch</language>
+            <language ident="de">Deutsch</language>
+            <language ident="it">Italienisch</language>
+            <language ident="es">Spanisch</language>
+            <language ident="la">Latein</language>
+            <language ident="el">Griechisch</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="hgv">
+               <term n="1">Vertrag</term>
+               <term n="2">Anerkenntnis</term>
+               <term n="3">Schuld</term>
+               <term n="4">Kirche</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2022-05-28T08:51:28-04:00"
+                 who="http://papyri.info/editor/users/james.cowey">Finalized - Ready.</change>
+         <change when="2022-05-25T06:02:54-04:00"
+                 who="http://papyri.info/editor/users/james.cowey">Vote - HGVAccept - Fine</change>
+         <change when="2022-05-25T06:00:18-04:00"
+                 who="http://papyri.info/editor/users/jonasschmitz">Submit - Eingegeben nach ZPE 219</change>
+         <change who="HGV" when="1995-07-24">Record created</change>
+         <change who="HGV" when="2009-07-02">Record last modified</change>
+         <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <div type="bibliography" subtype="principalEdition">
+            <listBibl>
+               <bibl type="publication" subtype="principal">
+                  <title level="s" type="abbreviated">ZPE</title>
+                  <biblScope n="1" type="volume">219</biblScope>
+                  <biblScope n="2" type="fascicle">(2021)</biblScope>
+                  <biblScope n="3" type="pages">S. 188</biblScope>
+                  <biblScope n="4" type="number">Nr. 8</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="illustrations">
+            <p>
+          keine
+          <bibl type="illustration">S. 189</bibl>
+            </p>
+         </div>
+         <div type="bibliography" subtype="otherPublications">
+            <listBibl>
+               <bibl type="publication" subtype="other">P.Lond. 3 874 (S. XLII) descr.</bibl>
+            </listBibl>
+         </div>
+      </body>
+  </text>
+</TEI>

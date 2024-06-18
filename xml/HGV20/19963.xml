@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/8.13/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="hgv19963">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>keiner</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">19963</idno>
+            <idno type="TM">19963</idno>
+            <idno type="ddb-perseus-style">0154;2;191</idno>
+            <idno type="ddb-filename">p.lond.2.191</idno>
+            <idno type="ddb-hybrid">p.lond;2;191</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <placeName>
+                     <settlement>London</settlement>
+                  </placeName>
+                  <collection>British Library</collection>
+                  <idno type="invNo">Papyrus 191</idno>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <material>Papyrus</material>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>unbekannt</origPlace>
+                     <origDate notBefore="0103" notAfter="0117">103 - 117</origDate>
+                  </origin>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>
+        This file encoded to comply with EpiDoc Guidelines and Schema version 8
+        <ref>http://www.stoa.org/epidoc/gl/5/</ref>
+         </p>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="fr">Französisch</language>
+            <language ident="en">Englisch</language>
+            <language ident="de">Deutsch</language>
+            <language ident="it">Italienisch</language>
+            <language ident="es">Spanisch</language>
+            <language ident="la">Latein</language>
+            <language ident="el">Griechisch</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="hgv">
+               <term n="1">Aufstellung des Inventars eines Haushalts durch eine Frau nach dem Tod ihres Mannes</term>
+               <term n="2">viele lateinische Begriffe</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2019-12-17T08:22:00-05:00"
+                 who="http://papyri.info/users/james.cowey">Finalized - Ready.</change>
+         <change when="2019-12-17T04:56:57-05:00"
+                 who="http://papyri.info/users/james.cowey">Vote - HGVAccept - Fine</change>
+         <change when="2019-12-16T22:29:41-05:00"
+                 who="http://papyri.info/users/gwschwendner">Submit - Added link to BL image</change>
+         <change when="2019-12-16T22:29:27-05:00"
+                 who="http://papyri.info/users/gwschwendner">Commit - added link to BL image</change>
+         <change who="HGV" when="1995-12-14">Record created</change>
+         <change who="HGV" when="2009-07-02">Record last modified</change>
+         <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="commentary" subtype="general">
+            <p>Tage: 25. Juni - 24. Juli.</p>
+         </div>
+         <div type="bibliography" subtype="principalEdition">
+            <listBibl>
+               <bibl type="publication" subtype="principal">
+                  <title level="s" type="abbreviated">P.Lond.</title>
+                  <biblScope n="1" type="volume">2</biblScope>
+                  <biblScope n="2" type="numbers">191</biblScope>
+                  <biblScope n="3" type="pages">(S. 264)</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="corrections">
+            <head>BL-Einträge nach BL-Konkordanz</head>
+            <listBibl>
+               <bibl type="BL">
+                  <biblScope type="volume">VIII</biblScope>
+                  <biblScope type="pages">174/175</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="illustrations">
+            <p>
+               <bibl type="illustration" n="1">P.Lond. II, Plate 46</bibl>
+               <bibl type="illustration" n="2">Pal. Soc. Mss., 2nd Ser., Vol. I, II. 163</bibl>
+            </p>
+         </div>
+         <div type="figure">
+            <p>
+               <figure>
+                  <graphic url="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Papyrus_191"/>
+               </figure>
+               <figure>
+                  <graphic url="https://access.bl.uk/item/viewer/ark:/81055/vdc_100143123373.0x000001"/>
+               </figure>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

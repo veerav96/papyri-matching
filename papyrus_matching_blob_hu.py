@@ -42,12 +42,13 @@ def perspective_transform(image, pts):
                     [0, maxHeight - 1]], dtype="float32")
 
     M = cv2.getPerspectiveTransform(rect, dst)
-    warped = cv2.warpPerspective(image, M, (maxWidth, maxHeight))
+    warped = cv2.warpPerspective(image, M, (maxWidth, maxHeight),borderMode=cv2.BORDER_TRANSPARENT)
 
     return warped
 
 # Script
-img = cv2.imread('/Users/cprao/Desktop/heidelberg_SEM3/practical/junk/G0107R.jpg')
+#img = cv2.imread('/Users/cprao/Desktop/heidelberg_SEM3/practical/junk/G0107R.jpg')
+img = cv2.imread('/Users/cprao/Desktop/heidelberg_SEM3/practical/papyri-matching/query_images/19317_p_g_192_c.jpg')
 height, width = img.shape[:2]
 
 cv2.namedWindow("Image", cv2.WINDOW_NORMAL)
@@ -73,8 +74,9 @@ if len(points) == 4:
 
     # Convert warped image to grayscale
     gray_warped = cv2.cvtColor(warped, cv2.COLOR_BGR2GRAY)
-
-    _, binary_img = cv2.threshold(gray_warped, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
+    blurred_image = cv2.GaussianBlur(gray_warped, (3, 3), 0)
+    blurred_image = cv2.medianBlur(blurred_image, 3)
+    _, binary_img = cv2.threshold(blurred_image, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
 
     # Display the binary image in a resizable window
     cv2.namedWindow('Binary Image (Otsu)', cv2.WINDOW_NORMAL)
@@ -83,53 +85,37 @@ if len(points) == 4:
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
-    # Blob detection
-    params = cv2.SimpleBlobDetector_Params()
+    # Find contours
+    contours, _ = cv2.findContours(binary_img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-    # Change thresholds
-    params.minThreshold = 0
-    params.maxThreshold = 255
+    # Identify the outermost contour (the outer boundary)
+    outer_contour = max(contours, key=cv2.contourArea)
 
-    # Filter by Area.
-    params.filterByArea = True
-    params.minArea = 100
+    # Filter out the outer boundary contour and keep only the interior holes
+    interior_contours = [cnt for cnt in contours if cv2.contourArea(cnt) < cv2.contourArea(outer_contour)]
 
-    # Filter by Circularity
-    params.filterByCircularity = False
+    # Sort the interior contours based on area
+    interior_contours = sorted(interior_contours, key=cv2.contourArea, reverse=True)[:10]
 
-    # Filter by Convexity
-    params.filterByConvexity = False
+    # Draw interior contours on the image
+    contour_img = cv2.cvtColor(binary_img, cv2.COLOR_GRAY2BGR)
+    cv2.drawContours(contour_img, interior_contours, -1, (0, 255, 0), 2)
 
-    # Filter by Inertia
-    params.filterByInertia = False
-
-    # Create a detector with the parameters
-    detector = cv2.SimpleBlobDetector_create(params)
-
-    # Detect blobs
-    keypoints = detector.detect(binary_img)
-
-    # Draw blobs on the binary image
-    blobs_img = cv2.drawKeypoints(binary_img, keypoints, np.array([]), (0, 0, 255),
-                                   cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-
-    # Display the binary image with detected blobs
-    cv2.namedWindow('Binary Image with Blobs', cv2.WINDOW_NORMAL)
-    cv2.resizeWindow('Binary Image with Blobs', warped_width, warped_height)
-    cv2.imshow('Binary Image with Blobs', blobs_img)
+    # Display the image with contours
+    cv2.namedWindow('Contours', cv2.WINDOW_NORMAL)
+    cv2.resizeWindow('Contours', warped_width, warped_height)
+    cv2.imshow('Contours', contour_img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
-    # Compute Hu moments for each blob
-    for i, keypoint in enumerate(keypoints):
-        moments = cv2.moments(keypoint.pt)
+    # Compute Hu moments for each interior contour
+    for i, contour in enumerate(interior_contours):
+        moments = cv2.moments(contour)
         hu_moments = cv2.HuMoments(moments).flatten()
-        print("Blob {}: Hu Moments = {}".format(i + 1, hu_moments))
+        print(f"Contour {i + 1}: Hu Moments = {hu_moments}")
 
 else:
     print("Error: Please click exactly 4 points.")
 
-
-
 # Wait for the user to press Enter before exiting
-input("Press Enter to exit...")
+#input("Press Enter to exit...")

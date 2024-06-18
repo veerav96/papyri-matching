@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/8.13/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="hgv21024">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>keiner</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">21024</idno>
+            <idno type="TM">21024</idno>
+            <idno type="ddb-perseus-style">0116;;AppII,118r</idno>
+            <idno type="ddb-filename">p.fuad.i.univ.AppII,118r</idno>
+            <idno type="ddb-hybrid">p.fuad.i.univ;;AppII,118r</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <placeName>
+                     <settlement>unbekannt</settlement>
+                  </placeName>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <material>Papyrus</material>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>Oxyrhynchites </origPlace>
+                     <origDate notBefore="0214" notAfter="0225-06">
+                        <precision match="../@notBefore" degree="0.5"/>ca. 214 - Juni 225</origDate>
+                  </origin>
+                  <provenance type="located">
+                     <p>
+                        <placeName type="ancient"
+                                   subtype="nome"
+                                   ref="https://www.trismegistos.org/place/2722 https://pleiades.stoa.org/places/736982">Oxyrhynchites</placeName>
+                        <placeName type="ancient" subtype="region">Ägypten</placeName>
+                     </p>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>This file encoded to comply with EpiDoc Guidelines and Schema version 8
+                <ref>http://www.stoa.org/epidoc/gl/5/</ref>
+         </p>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="fr">Französisch</language>
+            <language ident="en">Englisch</language>
+            <language ident="de">Deutsch</language>
+            <language ident="it">Italienisch</language>
+            <language ident="es">Spanisch</language>
+            <language ident="la">Latein</language>
+            <language ident="el">Griechisch</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="hgv">
+               <term>Liste</term>
+               <term>Namen</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change who="HGV" when="1992-06-26">Record created</change>
+         <change who="HGV" when="2009-07-02">Record last modified</change>
+         <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="commentary" subtype="general">
+            <p>Zur Datierung vgl. JJP 23, 1993, S. 54 und BASP 41, 2004, S. 144.</p>
+         </div>
+         <div type="bibliography" subtype="principalEdition">
+            <listBibl>
+               <bibl type="publication" subtype="principal">
+                  <title level="s" type="abbreviated">P.Fuad I Univ. App. II</title>
+                  <biblScope type="numbers">118</biblScope>
+                  <biblScope type="side">R</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="corrections">
+            <head>BL-Einträge nach BL-Konkordanz</head>
+            <listBibl>
+               <bibl type="BL-online">
+                  <ptr target="https://aquila.zaw.uni-heidelberg.de/bl/hgv/21024"/>
+               </bibl>
+               <bibl type="BL">
+                  <biblScope type="volume">XIII</biblScope>
+                  <biblScope type="pages">98</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="illustrations">
+            <p>keine</p>
+         </div>
+      </body>
+   </text>
+</TEI>

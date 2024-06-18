@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/8.13/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="hgv21125">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Letter from Besodorus to Theophanes</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">21125</idno>
+            <idno type="TM">21125</idno>
+            <idno type="ddb-perseus-style">0134;;6</idno>
+            <idno type="ddb-filename">p.herm.6</idno>
+            <idno type="ddb-hybrid">p.herm;;6</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <placeName>
+                     <settlement>Manchester</settlement>
+                  </placeName>
+                  <collection>John Rylands Library</collection>
+                  <idno type="invNo">P. Herm. 6</idno>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <material>Papyrus</material>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>Hermupolis ? (Hermopolites, Ägypten)</origPlace>
+                     <origDate notBefore="0317" notAfter="0323">
+                ca. 317 - 323
+                <precision match="../@notBefore" degree="0.5"/>
+                     </origDate>
+                  </origin>
+                  <provenance type="located">
+                     <p>
+                        <placeName n="1"
+                                   type="ancient"
+                                   cert="low"
+                                   ref="https://pleiades.stoa.org/places/727122 https://www.trismegistos.org/place/816">Hermupolis</placeName>
+                        <placeName n="2"
+                                   type="ancient"
+                                   subtype="nome"
+                                   ref="www.trismegistos.org/place/2720">Hermopolites</placeName>
+                        <placeName n="3" type="ancient" subtype="region">Ägypten</placeName>
+                     </p>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>
+        This file encoded to comply with EpiDoc Guidelines and Schema version 8
+        <ref>http://www.stoa.org/epidoc/gl/5/</ref>
+         </p>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="fr">Französisch</language>
+            <language ident="en">Englisch</language>
+            <language ident="de">Deutsch</language>
+            <language ident="it">Italienisch</language>
+            <language ident="es">Spanisch</language>
+            <language ident="la">Latein</language>
+            <language ident="el">Griechisch</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="hgv">
+               <term n="1">Brief (privat)</term>
+               <term n="2">Besodorus an Theophanes</term>
+               <term n="3">Wünsche</term>
+               <term n="4">Reise</term>
+               <term n="5">Rückkehr</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2024-02-06T03:32:58-05:00"
+                 who="http://papyri.info/editor/users/paulpeters">Finalized - Ready.</change>
+         <change when="2024-02-06T03:30:49-05:00"
+                 who="http://papyri.info/editor/users/paulpeters">Vote - HGVAccept - Looks good.</change>
+         <change when="2023-11-08T05:31:49-05:00"
+                 who="http://papyri.info/editor/users/paulpeters">Submit - Eingabe von Korrekturen in Z. 3, 10, 15, 19 und 21 nach JJP 43, 2013, S. 147 und 152 sowie von Verweisen in den Metadaten auf diesen Aufsatz (Bemerkungen): In Z. 18 ist mir unklar, ob Fournet διεκράζων als Partizip lesen möchte (so akzentuiert) oder als Indikativ wie in DDbDP. In Z. 11 muss ein ἧς eingefügt werden (ἀφʼ ἧ̣( ῾)ς καὶ), da ich dieses für die Bearbeitung entfernen musste: Der Grund hierfür ist mir nicht bekannt.</change>
+         <change who="HGV" when="1992-02-11">Record created</change>
+         <change who="HGV" when="2011-04-19">Record last modified</change>
+         <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <div type="commentary" subtype="general">
+            <p>Gehört zum Theophanes - Archiv. Zur Datierung vgl. P.Ryl. IV, S. 105. Neudruck mit leichten Veränderungen in Z. 3, 10, 15, 19 und 21: JJP 43, 2013, S. 147; zur Interpretation vgl. ebd.</p>
+         </div>
+         <div type="bibliography" subtype="principalEdition">
+            <listBibl>
+               <bibl type="publication" subtype="principal">
+                  <title level="s" type="abbreviated">P.Herm.</title>
+                  <biblScope type="numbers">6</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="corrections">
+            <head>BL-Einträge nach BL-Konkordanz</head>
+            <listBibl>
+               <bibl type="BL-online">
+                  <ptr target="https://aquila.zaw.uni-heidelberg.de/bl/hgv/21125"/>
+               </bibl>
+               <bibl type="BL">
+                  <biblScope type="volume">XIII</biblScope>
+                  <biblScope type="pages">111</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="illustrations">
+            <p>
+               <bibl type="illustration" n="1">Plate V</bibl>
+               <bibl type="illustration" n="2">Matthews, The Journey of Theophanes, S. 26, Fig. 2.6</bibl>
+            </p>
+         </div>
+         <div type="bibliography" subtype="translations">
+            <head xml:lang="de">Übersetzungen</head>
+            <listBibl xml:lang="en">
+               <head xml:lang="de">Englisch:</head>
+               <bibl type="translations">Matthews, The journey of Theophanes (2006), S. 27.</bibl>
+            </listBibl>
+            <listBibl xml:lang="it">
+               <head xml:lang="de">Italienisch:</head>
+               <bibl type="translations">A. Moscadi, Aegyptus 50, 1970, S. 140-141</bibl>
+            </listBibl>
+         </div>
+         <div type="figure">
+            <p>
+               <figure>
+                  <graphic url="https://luna.manchester.ac.uk/luna/servlet/view/search?q=metadata_schema=21125"/>
+               </figure>
+            </p>
+         </div>
+         <div type="bibliography" subtype="otherPublications"/>
+      </body>
+  </text>
+</TEI>

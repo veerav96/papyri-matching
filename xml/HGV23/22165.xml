@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/8.13/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="hgv22165">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Examination (ἐπίκρισις) for Membership of the Gymnasium</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">22165</idno>
+            <idno type="TM">22165</idno>
+            <idno type="ddb-perseus-style">0181;18;2186</idno>
+            <idno type="ddb-filename">p.oxy.18.2186</idno>
+            <idno type="ddb-hybrid">p.oxy;18;2186</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <placeName>
+                     <settlement>unbekannt</settlement>
+                  </placeName>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <material>Papyrus</material>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>Oxyrhynchos</origPlace>
+                     <origDate when="0260-08-28">28. Aug. 260</origDate>
+                  </origin>
+                  <provenance type="located">
+                     <p>
+                        <placeName type="ancient"
+                                   ref="https://pleiades.stoa.org/places/736983 https://www.trismegistos.org/place/1524">Oxyrhynchos</placeName>
+                        <placeName type="ancient"
+                                   subtype="nome"
+                                   ref="https://pleiades.stoa.org/places/736982 https://www.trismegistos.org/place/2722">Oxyrhynchites</placeName>
+                        <placeName type="ancient" subtype="region">Ägypten</placeName>
+                     </p>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>This file encoded to comply with EpiDoc Guidelines and Schema version 8
+                <ref>http://www.stoa.org/epidoc/gl/5/</ref>
+         </p>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="fr">Französisch</language>
+            <language ident="en">Englisch</language>
+            <language ident="de">Deutsch</language>
+            <language ident="it">Italienisch</language>
+            <language ident="es">Spanisch</language>
+            <language ident="la">Latein</language>
+            <language ident="el">Griechisch</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="hgv">
+               <term>Antrag</term>
+               <term>Aufnahme in das Gymnasium</term>
+               <term>Epikrisis</term>
+               <term>ausführlicher Nachweis privilegierter Vorfahren väterlicher- und mütterlicherseits</term>
+               <term>Eid</term>
+               <term>Zeugen</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change who="HGV" when="1993-01-18">Record created</change>
+         <change who="HGV" when="2011-04-19">Record last modified</change>
+         <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="commentary" subtype="general">
+            <p>Zu Z. 5, 6, 7, 8 und 9 vgl ZPE 185, 2013, S. 209, zu Z. 3; zu Z. 5, 6 , 7, 8, 9 und 10 vgl ebenda, zu Z. 4.</p>
+         </div>
+         <div type="commentary" subtype="mentionedDates">
+            <head>Erwähnte Daten</head>
+            <note type="original">Z. 3 - 4: 72 - 73; Z. 4: 4 - 5; Z. 5: 81 - 96, 113 - 114; Z. 6: 138 - 161, 165 - 166; Z. 8: 79 - 80; Z. 8 - 9: 122 - 123; Z. 9: 147 - 148, 181 - 182</note>
+            <note type="source">MentionedDates.fp7</note>
+            <list>
+               <item>
+                  <ref>Z. 3-4</ref>
+                  <date type="mentioned" notBefore="0072" notAfter="0073">72 - 73</date>
+               </item>
+               <item>
+                  <ref>Z. 4</ref>
+                  <date type="mentioned" notBefore="0004" notAfter="0005">4 - 5</date>
+               </item>
+               <item>
+                  <ref>Z. 5</ref>
+                  <date type="mentioned" notBefore="0081" notAfter="0096">81 - 96</date>
+               </item>
+               <item>
+                  <ref>Z. 5</ref>
+                  <date type="mentioned" notBefore="0113" notAfter="0114">113 - 114</date>
+               </item>
+               <item>
+                  <ref>Z. 6</ref>
+                  <date type="mentioned" notBefore="0138" notAfter="0161">138 - 161</date>
+               </item>
+               <item>
+                  <ref>Z. 6</ref>
+                  <date type="mentioned" notBefore="0165" notAfter="0166">165 - 166</date>
+               </item>
+               <item>
+                  <ref>Z. 8</ref>
+                  <date type="mentioned" notBefore="0079" notAfter="0080">79 - 80</date>
+               </item>
+               <item>
+                  <ref>Z. 8-9</ref>
+                  <date type="mentioned" notBefore="0122" notAfter="0123">122 - 123</date>
+               </item>
+               <item>
+                  <ref>Z. 9</ref>
+                  <date type="mentioned" notBefore="0147" notAfter="0148">147 - 148</date>
+               </item>
+               <item>
+                  <ref>Z. 9</ref>
+                  <date type="mentioned" notBefore="0181" notAfter="0182">181 - 182</date>
+               </item>
+            </list>
+         </div>
+         <div type="bibliography" subtype="principalEdition">
+            <listBibl>
+               <bibl type="publication" subtype="principal">
+                  <title level="s" type="abbreviated">P.Oxy.</title>
+                  <biblScope type="volume">18</biblScope>
+                  <biblScope type="numbers">2186</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="corrections">
+            <head>BL-Einträge nach BL-Konkordanz</head>
+            <listBibl>
+               <bibl type="BL">
+                  <biblScope type="volume">VIII</biblScope>
+                  <biblScope type="pages">254</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="illustrations">
+            <p>keine</p>
+         </div>
+         <div type="bibliography" subtype="translations">
+            <head xml:lang="de">Übersetzungen</head>
+            <listBibl xml:lang="en">
+               <head xml:lang="de">Englisch:</head>
+               <bibl type="translations">Lewis, Life in Egypt (1983), S. 42</bibl>
+               <bibl type="translations">Joyal, Greek and Roman Education (2009), S. 254f. (b)</bibl>
+            </listBibl>
+         </div>
+         <div type="figure">
+            <p>
+               <figure>
+                  <graphic url="https://doi.org/10.25446/oxford.21163045"/>
+               </figure>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

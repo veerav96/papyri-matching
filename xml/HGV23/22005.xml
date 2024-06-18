@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/8.13/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="hgv22005">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Letter of Horeis to Horion</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">22005</idno>
+            <idno type="TM">22005</idno>
+            <idno type="ddb-perseus-style">0181;14;1757</idno>
+            <idno type="ddb-filename">p.oxy.14.1757</idno>
+            <idno type="ddb-hybrid">p.oxy;14;1757</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <placeName>
+                     <settlement>Sydney</settlement>
+                  </placeName>
+                  <collection>Chau Chak Wing Museum</collection>
+                  <idno type="invNo">NM39.1</idno>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <material>Papyrus</material>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>Oxyrhynchos</origPlace>
+                     <origDate notBefore="0138">
+                        <offset n="1" type="after">nach</offset>
+                138
+              </origDate>
+                  </origin>
+                  <provenance type="located">
+                     <p>
+                        <placeName type="ancient"
+                                   ref="https://pleiades.stoa.org/places/736983 https://www.trismegistos.org/place/1524">Oxyrhynchos</placeName>
+                        <placeName type="ancient"
+                                   subtype="nome"
+                                   ref="https://pleiades.stoa.org/places/736982 https://www.trismegistos.org/place/2722">Oxyrhynchites</placeName>
+                        <placeName type="ancient" subtype="region">Ägypten</placeName>
+                     </p>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>
+        This file encoded to comply with EpiDoc Guidelines and Schema version 8
+        <ref>http://www.stoa.org/epidoc/gl/5/</ref>
+         </p>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="fr">Französisch</language>
+            <language ident="en">Englisch</language>
+            <language ident="de">Deutsch</language>
+            <language ident="it">Italienisch</language>
+            <language ident="es">Spanisch</language>
+            <language ident="la">Latein</language>
+            <language ident="el">Griechisch</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="hgv">
+               <term n="1">Brief (privat)</term>
+               <term n="2">Horeis an Horion</term>
+               <term n="3">Forderung einer Antwort</term>
+               <term n="4">Ankündigung von einer Sendung diverser Gegenstände</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2022-03-22T16:13:26-04:00"
+                 who="http://papyri.info/editor/users/james.cowey">Finalized - Ready.</change>
+         <change when="2022-03-22T12:14:34-04:00"
+                 who="http://papyri.info/editor/users/james.cowey">Vote - HGVAccept - Fine</change>
+         <change when="2022-03-21T04:47:55-04:00"
+                 who="http://papyri.info/editor/users/pag">Submit - entered Collection, inv. no., and URL for digital image</change>
+         <change who="HGV" when="1993-11-04">Record created</change>
+         <change who="HGV" when="2011-04-19">Record last modified</change>
+         <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
+      </revisionDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <div type="commentary" subtype="general">
+            <p>Tag: 1. (2.) Dez.</p>
+         </div>
+         <div type="bibliography" subtype="principalEdition">
+            <listBibl>
+               <bibl type="publication" subtype="principal">
+                  <title level="s" type="abbreviated">P.Oxy.</title>
+                  <biblScope n="1" type="volume">14</biblScope>
+                  <biblScope n="2" type="numbers">1757</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="illustrations">
+            <p>keine</p>
+         </div>
+         <div type="figure">
+            <p>
+               <figure>
+                  <graphic url="https://www.sydney.edu.au/museums/collections_search/?record=ecatalogue.40861"/>
+               </figure>
+            </p>
+         </div>
+      </body>
+  </text>
+</TEI>

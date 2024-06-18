@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/8.13/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="hgv19979">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Copia di estratti da registri di censimento</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">19979</idno>
+            <idno type="TM">19979</idno>
+            <idno type="ddb-filename">pylon.1.9</idno>
+            <idno type="ddb-hybrid">pylon;1;9</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <placeName>
+                     <settlement>London</settlement>
+                  </placeName>
+                  <collection>British Library</collection>
+                  <idno type="invNo">Papyrus 297</idno>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <material>Papyrus</material>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>unbekannt</origPlace>
+                     <origDate notBefore="0089" notAfter="0104">89 - 104</origDate>
+                  </origin>
+               </history>
+            </msDesc>
+            <listBibl>
+               <bibl type="SB">
+                  <ptr target="https://papyri.info/biblio/96107"/>
+               </bibl>
+            </listBibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>This file encoded to comply with EpiDoc Guidelines and Schema version 8
+                <ref>http://www.stoa.org/epidoc/gl/5/</ref>
+         </p>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="fr">Französisch</language>
+            <language ident="en">Englisch</language>
+            <language ident="de">Deutsch</language>
+            <language ident="it">Italienisch</language>
+            <language ident="es">Spanisch</language>
+            <language ident="la">Latein</language>
+            <language ident="el">Griechisch</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="hgv">
+               <term>Register</term>
+               <term>Zensus</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change who="HGV" when="1996-01-18">Record created</change>
+         <change who="HGV" when="2009-07-02">Record last modified</change>
+         <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
+         <change when="2022-07-05" who="https://papyri.info/editor/users/Mike%20Sampson">Updated following Pylon 1</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography" subtype="principalEdition">
+            <listBibl>
+               <bibl type="publication" subtype="principal">
+                  <title level="s" type="abbreviated">Pylon</title>
+                  <biblScope n="1" type="volume">1</biblScope>
+                  <biblScope n="2" type="fascicle">(2022)</biblScope>
+                  <biblScope n="3" type="generic">Art. 9</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="illustrations">
+            <p>keine</p>
+         </div>
+         <div type="figure">
+            <p>
+               <figure n="1">
+                  <graphic url="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Papyrus_297"/>
+               </figure>
+               <figure n="2">
+                  <graphic url="https://doi.org/10.48631/pylon.2022.1.89338"/>
+               </figure>
+               <figure>
+                  <graphic url="https://access.bl.uk/item/viewer/ark:/81055/vdc_100143125709.0x000001"/>
+               </figure>
+            </p>
+         </div>
+         <div type="bibliography" subtype="otherPublications">
+            <listBibl>
+               <bibl type="publication" subtype="other">P.Lond. II 297 a (S. XXVIII)</bibl>
+            </listBibl>
+         </div>
+      </body>
+   </text>
+</TEI>
